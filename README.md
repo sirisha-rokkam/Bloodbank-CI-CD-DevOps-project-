@@ -5,7 +5,7 @@ Bloodbank-CI/CD-DevOps-project using jenkins sonar trivy docker kubernetes and A
 
 <img src="https://img.shields.io/badge/STATUS-PRODUCTION%20READY-success?style=for-the-badge&labelColor=1a1a2e&color=16213e" />
 
-# 🩸 Blood Bank Application — End-to-End DevOps Pipeline
+#  Blood Bank Application — End-to-End DevOps Pipeline
 
 ### *From code commit to live Kubernetes cluster — fully automated.*
 
@@ -13,17 +13,17 @@ Bloodbank-CI/CD-DevOps-project using jenkins sonar trivy docker kubernetes and A
 
 ---
 
-## 📌 What Is This Project?
+##  What Is This Project?
 
 This project is a **real-world, production-grade DevOps implementation** of a PHP-based Blood Bank Management System.
 
 It demonstrates the **complete software delivery lifecycle** — from a developer pushing code, through automated quality checks and security scanning, to a zero-touch Kubernetes deployment via GitOps.
 
-> 💡 **Built to simulate how modern engineering teams ship software at scale.**
+>  **Built to simulate how modern engineering teams ship software at scale.**
 
 ---
 
-## 🏗️ Pipeline Architecture
+##  Pipeline Architecture
 
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
@@ -66,7 +66,7 @@ It demonstrates the **complete software delivery lifecycle** — from a develope
 
 ---
 
-## ⚙️ Infrastructure Setup
+##  Infrastructure Setup
 
 ### EC2 Instance
 ```
@@ -101,7 +101,7 @@ curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/inst
 
 ---
 
-## 🔄 CI/CD Pipeline — Step by Step
+##  CI/CD Pipeline — Step by Step
 
 ```
 Stage 1: Code Checkout       → Pull from GitHub
@@ -113,7 +113,7 @@ Stage 6: DockerHub Push      → Tag & push verified images
 Stage 7: GitOps Update       → Update Kubernetes manifest with new image tag
 Stage 8: ArgoCD Sync         → Automatically detect and deploy changes
 
-## 🐳 Docker
+##  Docker
 
 ### Image Builds
 ```bash
@@ -181,7 +181,7 @@ kops update cluster --name siri.k8s.local --yes
 
 ---
 
-## 🚀 GitOps with ArgoCD
+##  GitOps with ArgoCD
 
 Instead of Jenkins deploying directly to Kubernetes:
 
@@ -191,16 +191,16 @@ ArgoCD watches Git ──▶  Detects change ──▶  Deploys automatically
 ```
 
 ### Why GitOps?
-- ✅ **Declarative** — desired state is always in Git
-- ✅ **Self-healing** — ArgoCD reverts manual changes automatically
-- ✅ **Auditable** — every deployment is a Git commit
-- ✅ **Rollback** = a `git revert`
+-  **Declarative** — desired state is always in Git
+-  **Self-healing** — ArgoCD reverts manual changes automatically
+-  **Auditable** — every deployment is a Git commit
+-  **Rollback** = a `git revert`
 
 > 🔒 In a production scenario, this would be integrated with **AWS Secrets Manager** or **HashiCorp Vault**.
 
 ---
 
-## 📊 Monitoring
+##  Monitoring
 
 ```bash
 # Deploy Metrics Server (required for HPA)
@@ -215,7 +215,7 @@ kubectl top nodes
 
 **Prometheus** is deployed via Helm for deeper cluster observability, scraping metrics from all pods and nodes.
 
-## 🐛 Troubleshooting Guide
+##  Troubleshooting Guide or Faced issues
 
 | Symptom | Root Cause | Fix |
 |---|---|---|
@@ -227,7 +227,7 @@ kubectl top nodes
 | ArgoCD out of sync | Webhook not configured | Manual sync: `argocd app sync bloodbank` |
 
 
-## ✅ Key Highlights
+##  Project Highlights
 
 | Feature | Implementation |
 |---|---|

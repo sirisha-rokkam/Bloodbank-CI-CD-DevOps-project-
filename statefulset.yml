@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql
+spec:
+  serviceName: "mysql"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-database
+  template:
+    metadata:
+      labels:
+        app: app-database
+    spec:
+      containers:
+      - name: nginx
+        image: sirisharokkam/bloodbank:dbimage-25
+        ports:
+        - containerPort: 80
+          name: web
+
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+
+        volumeMounts:
+        - name: www
+          mountPath: /usr/share/nginx/html
+
+  volumeClaimTemplates:
+  - metadata:
+      name: www
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
+

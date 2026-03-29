@@ -1,13 +1,10 @@
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/29793689-c091-4986-a4f1-cff63be74aa8" /># Bloodbank-CI-CD-DevOps-project-
+#<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/057ebd6c-b876-4bda-b6aa-65aad879d472" />
+ Bloodbank-CI-CD-DevOps-project-
 Bloodbank-CI/CD-DevOps-project using jenkins sonar trivy docker kubernetes and ArgoCD
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/STATUS-PRODUCTION%20READY-success?style=for-the-badge&labelColor=1a1a2e&color=16213e" />
-
 #  Blood Bank Application — End-to-End DevOps Pipeline
-
-### *From code commit to live Kubernetes cluster — fully automated.*
 
 </div>
 

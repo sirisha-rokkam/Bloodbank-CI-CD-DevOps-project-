@@ -185,6 +185,8 @@ Instead of Jenkins deploying directly to Kubernetes:
 ```
 Jenkins pipeline  ──▶  Updates image tag in Git (GitOps repo)
 ArgoCD watches Git ──▶  Detects change ──▶  Deploys automatically
+<img width="2298" height="1254" alt="image" src="https://github.com/user-attachments/assets/046718ff-7987-4417-b61d-d68ace41a2a2" />
+
 ```
 
 ### Why GitOps?
@@ -192,8 +194,6 @@ ArgoCD watches Git ──▶  Detects change ──▶  Deploys automatically
 -  **Self-healing** — ArgoCD reverts manual changes automatically
 -  **Auditable** — every deployment is a Git commit
 -  **Rollback** = a `git revert`
-
-> 🔒 In a production scenario, this would be integrated with **AWS Secrets Manager** or **HashiCorp Vault**.
 
 ---
 
